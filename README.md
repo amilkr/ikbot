@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/amilkr/ikbot.svg?branch=travis)](https://travis-ci.org/amilkr/ikbot)
+
 ikbot
 =====
 

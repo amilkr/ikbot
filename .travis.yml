@@ -1,8 +1,6 @@
 language: erlang
 
 otp_release:
-  - 17.0
-  - 17.3
   - 17.4
 
 sudo: false
@@ -11,4 +9,10 @@ env:
   - ELIXIR_ERL_OPTIONS=""
   - ELIXIR_ERL_OPTIONS="+T 9"
 
-script: "make compile && rm -rf .git && make test"
+before_script:
+  - export PATH=`pwd`/elixir/bin:$PATH
+  - mix archive.install http://s3.hex.pm/installs/hex.ez --force
+  - mix deps.get
+  - cp config/config.exs.template config/config.exs
+
+script: "mix compile && mix test"
