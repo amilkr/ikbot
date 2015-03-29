@@ -6,7 +6,7 @@ defmodule Ikbot.Script.Daily do
     ## Examples:
 
       iex> daily = Ikbot.Script.Daily.base %{}
-      ...> "daily: I'm kinda busy. " <> text = daily
+      ...> "daily: " <> text = daily <> "."
       ...> is_binary(text)
       :true
   

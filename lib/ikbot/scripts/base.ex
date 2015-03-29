@@ -23,8 +23,8 @@ defmodule Ikbot.Script.Base do
       iex> Ikbot.Script.Base.say %{body: ""}
       "(wat) tell me something to say"
 
-      iex> Ikbot.Script.Base.say %{body: ""}
-      "this is a test"
+      iex> Ikbot.Script.Base.say %{body: "hello world"}
+      "hello world"
 
   """
   def say(message) do
